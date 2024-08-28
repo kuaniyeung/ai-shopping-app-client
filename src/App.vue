@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-black">Hello</div>
+  <button className="btn btn-warning">Warning</button>
 </template>
 
 <style scoped></style>
