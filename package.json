@@ -8,7 +8,8 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest"
   },
   "dependencies": {
     "pinia": "^2.2.2",
@@ -25,13 +26,16 @@
     "@storybook/vue3": "^8.2.9",
     "@storybook/vue3-vite": "^8.2.9",
     "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.10",
+    "jsdom": "^25.0.0",
     "postcss": "^8.4.41",
     "storybook": "^8.2.9",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
+    "vitest": "^2.0.5",
     "vue-tsc": "^2.0.29"
   }
 }
