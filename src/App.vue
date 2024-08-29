@@ -1,5 +1,5 @@
 <template>
-  <button className="btn btn-warning">Warning</button>
+  <Button label="Hey darling" />
 </template>
 
 <script setup lang="ts">
