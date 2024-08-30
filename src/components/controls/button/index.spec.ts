@@ -2,7 +2,7 @@ import { test, expect, describe, beforeEach } from "vitest";
 import { mount, VueWrapper } from "@vue/test-utils";
 import { Button, ButtonThemes } from "..";
 
-const initWrapper = (options: Object = {}) => {
+const initWrapper = (options = {}) => {
   const wrapper = mount(Button, {
     props: {
       label: "Hey darling",
@@ -18,6 +18,7 @@ describe("Button", () => {
   const getLoader = () => wrapper.find("[data-test=loader]");
 
   const mountComponent = (options = {}) => (wrapper = initWrapper(options));
+
   beforeEach(() => {
     mountComponent();
   });
@@ -26,6 +27,11 @@ describe("Button", () => {
     test(`should have correct attrs && props`, async () => {
       const attrs = wrapper.attributes();
       expect(attrs).toHaveProperty("class", `btn ${ButtonThemes.PRIMARY}`);
+    });
+    test(`should be disabled if disabled attribute is passed`, async () => {
+      expect(wrapper.attributes()).not.toHaveProperty("disabled");
+      mountComponent({ attrs: { disabled: true } });
+      expect(wrapper.attributes()).toHaveProperty("disabled");
     });
     describe("label", () => {
       test(`should render with correct text`, () => {
