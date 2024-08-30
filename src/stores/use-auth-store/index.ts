@@ -8,14 +8,13 @@ export default (storeId = "auth") => {
     state: () =>
       ({
         user: null,
-      } as State),
+      }) as State,
     actions: {
       async getUser() {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/users"
         );
         const json = await response.json();
-        console.log(json);
       },
     },
   });

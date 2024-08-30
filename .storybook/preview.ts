@@ -1,6 +1,6 @@
 import { type Preview, setup } from "@storybook/vue3";
-import { Button } from "../src/components";
 import "../src/index.css";
+import { useInitAppComponents } from "../src/components";
 
 const preview: Preview = {
   parameters: {
@@ -13,8 +13,10 @@ const preview: Preview = {
   },
 };
 
+const { initGlobalComponents } = useInitAppComponents();
+
 setup((app) => {
-  app.component("Button", Button);
+  initGlobalComponents(app);
 });
 
 export default preview;

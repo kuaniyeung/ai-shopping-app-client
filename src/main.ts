@@ -1,12 +1,16 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import "./index.css";
+import { useInitAppComponents } from "./components";
+
+const { initGlobalComponents } = useInitAppComponents();
+
 import App from "./App.vue";
-import { Button } from "./components";
 
 const pinia = createPinia();
 const app = createApp(App);
 
+initGlobalComponents(app);
 app.use(pinia);
-app.component("Button", Button);
+
 app.mount("#app");

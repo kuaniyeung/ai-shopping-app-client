@@ -28,11 +28,13 @@ describe("Button", () => {
       const attrs = wrapper.attributes();
       expect(attrs).toHaveProperty("class", `btn ${ButtonThemes.PRIMARY}`);
     });
+
     test(`should be disabled if disabled attribute is passed`, async () => {
       expect(wrapper.attributes()).not.toHaveProperty("disabled");
       mountComponent({ attrs: { disabled: true } });
       expect(wrapper.attributes()).toHaveProperty("disabled");
     });
+
     describe("label", () => {
       test(`should render with correct text`, () => {
         expect(getLabel().exists()).toBeTruthy();
