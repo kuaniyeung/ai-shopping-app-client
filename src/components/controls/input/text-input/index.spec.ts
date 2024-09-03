@@ -38,7 +38,7 @@ describe("TextInput", () => {
 
   describe("Emits", () => {
     describe("update:modelValue", () => {
-      test(`should emit `, async () => {
+      test(`should emit`, async () => {
         const value = "Testing";
         wrapper.find("input").setValue(value);
         await wrapper.vm.$nextTick();
