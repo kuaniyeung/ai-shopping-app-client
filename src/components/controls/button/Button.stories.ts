@@ -1,5 +1,5 @@
-import { Meta, StoryFn } from "@storybook/vue3";
 import Button from "./Button.vue";
+import { Meta, StoryFn } from "@storybook/vue3";
 import { ref } from "vue";
 import { ButtonStyles } from "./enums";
 

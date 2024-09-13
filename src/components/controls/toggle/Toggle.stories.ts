@@ -1,22 +1,23 @@
-import Checkbox from "./Checkbox.vue";
+import Toggle from "./Toggle.vue";
 import { Meta, StoryFn } from "@storybook/vue3";
 
-const meta: Meta<typeof Checkbox> = {
-  title: "Components/Checkbox",
-  component: Checkbox,
+const meta: Meta<typeof Toggle> = {
+  title: "Components/Toggle",
+  component: Toggle,
   argTypes: {
     label: { control: "text" },
+    disabled: { control: false },
   },
 };
 
 export default meta;
 
-const Template: StoryFn<typeof Checkbox> = (args) => ({
-  components: { Checkbox },
+const Template: StoryFn<typeof Toggle> = (args) => ({
+  components: { Toggle },
   setup() {
     return { args };
   },
-  template: '<Checkbox v-bind="args" />',
+  template: '<Toggle v-bind="args" />',
 });
 
 export const Default = Template.bind({});

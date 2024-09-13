@@ -1,6 +1,6 @@
 import { type Preview, setup } from "@storybook/vue3";
 import "../src/index.css";
-import { useInitAppComponents } from "../src/components";
+import { useInitAppComponents } from "../src/helpers";
 
 const preview: Preview = {
   parameters: {

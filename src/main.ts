@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import "./index.css";
-import { useInitAppComponents } from "./components";
+import { useInitAppComponents } from "./helpers";
 
 const { initGlobalComponents } = useInitAppComponents();
 
