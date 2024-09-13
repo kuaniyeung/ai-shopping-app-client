@@ -1,7 +1,6 @@
 import TextInput from "./TextInput.vue";
 import { Meta, StoryFn } from "@storybook/vue3";
 
-// Define your story metadata
 const meta: Meta<typeof TextInput> = {
   title: "Components/TextInput",
   component: TextInput,

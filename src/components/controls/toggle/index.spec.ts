@@ -1,9 +1,9 @@
 import { mount, VueWrapper } from "@vue/test-utils";
-import { Checkbox } from "..";
+import { Toggle } from "..";
 import { beforeEach, describe, expect, test } from "vitest";
 
 const initWrapper = (options = {}) => {
-  const wrapper = mount(Checkbox, {
+  const wrapper = mount(Toggle, {
     props: {
       label: "Default",
     },
@@ -12,8 +12,8 @@ const initWrapper = (options = {}) => {
   return wrapper;
 };
 
-describe("Checkbox", () => {
-  let wrapper: VueWrapper<InstanceType<typeof Checkbox>>;
+describe("Toggle", () => {
+  let wrapper: VueWrapper<InstanceType<typeof Toggle>>;
   const getLabel = () => wrapper.find("[data-test=label]");
   const getInput = () => wrapper.find("input");
 

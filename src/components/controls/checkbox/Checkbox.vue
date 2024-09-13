@@ -1,12 +1,12 @@
 <template>
-  <div class="form-control">
+  <div class="form-control" :disabled="disabled">
     <label class="label cursor-pointer">
       <span class="label-text" data-test="label">{{ label }}</span>
       <input
         v-model="value"
         type="checkbox"
         class="checkbox"
-        @click="(e) => console.log(e)"
+        :disabled="disabled"
       />
     </label>
   </div>
@@ -17,5 +17,6 @@ const value = defineModel();
 
 defineProps({
   label: { type: String },
+  disabled: { type: Boolean },
 });
 </script>
