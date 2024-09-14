@@ -1,13 +1,15 @@
 <template>
-  <Toggle label="Test" v-model="checked" disabled />
-  <span>Checked: {{ checked }}</span>
+  <Toggle label="Test" disabled> </Toggle>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import { Toggle } from "./components";
 
-const checked = ref(false);
+const test = [
+  { title: "Dish A", content: ["a1", "a2", "a3"] },
+  { title: "Dish B", content: ["b1", "b2", "b3"] },
+  { title: "Dish C", content: ["c1", "c2", "c3"] },
+];
 </script>
 
 <style scoped></style>
