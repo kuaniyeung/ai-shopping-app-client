@@ -1,5 +1,5 @@
 <template>
-  <div className="flex flex-col" :disabled="disabled">
+  <div className="flex flex-col">
     <div className="form-control">
       <label className="label cursor-pointer">
         <span className="label-text" data-test="label">{{ label }}</span>
@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-const value = defineModel();
+const value = defineModel({ type: Boolean });
 
 defineProps({
   label: { type: String },

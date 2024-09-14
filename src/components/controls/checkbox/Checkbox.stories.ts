@@ -36,15 +36,8 @@ Unchecked.args = {
   modelValue: false,
 };
 
-export const DisabledDefault = Template.bind({});
-DisabledDefault.args = {
-  label: "Disabled and Unchecked",
-  disabled: true,
-};
-
-export const DisabledChecked = Template.bind({});
-DisabledChecked.args = {
-  label: "Disabled and Checked",
-  modelValue: true,
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: "Disabled",
   disabled: true,
 };

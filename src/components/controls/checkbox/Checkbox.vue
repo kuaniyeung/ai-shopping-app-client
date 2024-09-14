@@ -1,5 +1,5 @@
 <template>
-  <div class="form-control" :disabled="disabled">
+  <div class="form-control">
     <label class="label cursor-pointer">
       <span class="label-text" data-test="label">{{ label }}</span>
       <input
@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-const value = defineModel();
+const value = defineModel({ type: Boolean });
 
 defineProps({
   label: { type: String },
