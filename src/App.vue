@@ -1,14 +1,22 @@
 <template>
-  <Toggle label="Test" disabled> </Toggle>
+  <Breadcrumbs label="Test" disabled>
+    <BreadcrumbsTab
+      v-for="item in test"
+      :key="item.title"
+      :title="item.title"
+      :disabled="item.disabled"
+      :href="item.href"
+    ></BreadcrumbsTab>
+  </Breadcrumbs>
 </template>
 
 <script setup lang="ts">
-import { Toggle } from "./components";
+import { Breadcrumbs, BreadcrumbsTab } from "./components";
 
 const test = [
-  { title: "Dish A", content: ["a1", "a2", "a3"] },
-  { title: "Dish B", content: ["b1", "b2", "b3"] },
-  { title: "Dish C", content: ["c1", "c2", "c3"] },
+  { title: "Dish A", disabled: false, href: "https://test1.com" },
+  { title: "Dish B", disabled: true },
+  { title: "Dish C", disabled: false, href: "https://test2.com" },
 ];
 </script>
 
